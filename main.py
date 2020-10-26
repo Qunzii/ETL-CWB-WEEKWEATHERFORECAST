@@ -18,7 +18,7 @@ from libs import postgres
 host = '192.168.63.160'
 dbname = 'api'
 user = 'postgres'
-password = 'postgres'
+keycode = 'postgres'
 
 def parseAPI(connObj):
     # 初始化XML資料陣列
@@ -174,7 +174,7 @@ def parseAPI(connObj):
         dataSeq_count += 1
 
 # 取得連線物件
-connObj = postgres.connection(host, dbname, user, password, '', '', '').getConnectionObject()
+connObj = postgres.connection(host, dbname, user, keycode, '', '', '').getConnectionObject()
 
 # main process
 parseAPI(connObj)
